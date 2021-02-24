@@ -14,9 +14,8 @@ exports.handler = async (event, context) => {
 
 	return {
 		statusCode: 301,
-		body: `Location:e`,
 		headers: {
-			Location: `e`,
+			Location: url,
 		},
 	};
 };
