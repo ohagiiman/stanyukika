@@ -12,7 +12,7 @@ exports.handler = async (event, context) => {
 		orange_road: 'https://youtu.be/Uoutn3GVHqs',
 	};
 
-	const url = Object.values(songs)[~~(Math.random() * songs.length)];
+	const url = Object.values(songs)[~~(Math.random() * Object.values(songs).length)];
 
 	return {
 		statusCode: 301,
