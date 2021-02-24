@@ -1,0 +1,6 @@
+[build]
+    functions = ""
+[[redirects]]
+    from = "/*"
+    to = "/.netlify/functions/random"
+    status = 301
