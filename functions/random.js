@@ -9,8 +9,7 @@ exports.handler = async (event, context) => {
 
 	// const { songs } = await request.json();
 	const songs = ['https://umai.pw'];
-
-	const url = songs[~(Math.random() * songs.length)];
+	const url = songs[~~(Math.random() * songs.length)];
 
 	return {
 		statusCode: 301,
