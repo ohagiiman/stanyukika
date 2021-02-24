@@ -1,5 +1,5 @@
 exports.handler = async (event, context) => {
-	const songs = {
+	const songs = Object.values({
 		i_feel_love: 'https://youtu.be/xe605QH9BNs',
 		soul_lady: 'https://youtu.be/lxPndeAzfwI',
 		neon: 'https://youtu.be/Mm2PW9CZHJc',
@@ -10,9 +10,9 @@ exports.handler = async (event, context) => {
 		shade: 'https://youtu.be/rK69AriTIZc',
 		cherries_jubiles_aucustic: 'https://youtu.be/ypDTAszCZAk',
 		orange_road: 'https://youtu.be/Uoutn3GVHqs',
-	};
+	});
 
-	const url = Object.values(songs)[~~(Math.random() * Object.values(songs).length)];
+	const url = songs[~~(Math.random() * songs.length)];
 
 	return {
 		statusCode: 301,
